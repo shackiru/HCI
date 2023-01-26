@@ -8,3 +8,15 @@ body
     padding: 0px;
     color: #000000;
 }
+
+div
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: yellowgreen;
+}
+
+span
+{
+    background-color: violet;
+}
