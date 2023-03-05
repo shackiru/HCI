@@ -53,3 +53,13 @@ buttonSubmit.addEventListener('click', (event)=>
 
     divError.innerHTML = errorText
 })
+
+const object = 
+{
+    name: "a",
+    age: "10",
+}
+
+object.name = "b" // OK
+object = {} //Error
+delete object.age
