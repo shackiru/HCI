@@ -16,21 +16,26 @@ body
     display: flex;
     max-width: 900px;
     width: 100%;
-    height: 400px;
+    height: 900px;
 }
 
 .content-panel
 {
     position: relative;
     min-height: 100%;
-    flex: 1;
-    margin: 5px;
+    flex: 8;
     overflow: hidden;
     box-shadow: 2px 9px 15px 5px rgba(0, 0, 0, 0.123);
     background-color: transparent;
     transition: flex .5s ease-in-out;
     transition-delay: .2s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
+.content-panel .img-content
 
 .content-panel img
 {
@@ -50,7 +55,7 @@ body
     color: #fff;
     transform: translateX(100px);
     width: 30ch;
-    opacity: 0;
+    opacity: 100%;
     transition: opacity .8s ease-out,
                 transform .6 east-in-out;
 }
@@ -60,6 +65,7 @@ body
     font-size: 2.5rem;
     margin: 0;
     font-family: "The Nautigal", cursive;
+    color: #000;
 }
 
 .content p
@@ -69,7 +75,7 @@ body
 
 .panel .active
 {
-    flex: 5;
+    flex: 14;
 }
 
 .panel .active img
@@ -81,4 +87,16 @@ body
 {
     transform: translateX(0px);
     opacity: 1;
+}
+
+@media (max-width: 475px)
+{
+    .panel
+    {
+        flex-direction: column;
+    }
+    .content-panel
+    {
+        margin: 1rem;
+    }
 }
