@@ -1,7 +1,7 @@
 const panels = document.querySelectorAll(".content-panel")
 panels.forEach(panel => 
     {
-        panel.addEventListener("click", ()=>
+        panel.addEventListener("mouseenter", ()=>
         {
             removeActiveClass()
             panel.classList.add("active")
