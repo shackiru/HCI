@@ -25,28 +25,109 @@ body
     min-height: 100%;
     flex: 8;
     overflow: hidden;
-    box-shadow: 2px 9px 15px 5px rgba(0, 0, 0, 0.123);
+    /* box-shadow: 2px 9px 15px 5px rgba(0, 0, 0, 0.123); */
     background-color: transparent;
     transition: flex .5s ease-in-out;
     transition-delay: .2s;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 
-.content-panel .img-content
+.img-content
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 
-.content-panel img
+.img-content img
 {
     width: 100%;
     height: 100%;
+    margin-top: 10px;
     object-fit: cover;
-    object-position: center;
+    object-position: 40%;
     transition: .5s;
+    z-index: -1;
+    /* object-position: 1p; */
 }
 
-.content-panel .content
+.content-panel:nth-child(2) .img-content img 
+{
+    object-position: 60%;
+}
+
+
+.content-panel:nth-child(5) .img-content img 
+{
+    margin-top: 42px;
+}
+
+.content
+{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    color: #fff;
+    /* transform: translateX(100px); */
+    width: 30ch;
+    opacity: 100%;
+    transition: opacity .8s ease-out,
+                transform .6 east-in-out;
+    flex-direction: column;
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 90px;
+}
+
+.content-panel:nth-child(1)
+{
+    background-image: url(assets/1161814.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.content-panel:nth-child(2)
+{
+    background-image: url(assets/1160737.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.content-panel:nth-child(3)
+{
+    background-image: url(assets/wp9550691-genshin-impact-inazuma-wallpapers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.content-panel:nth-child(4)
+{
+    background-image: url(assets/1920x1080-33980-Inazuma-Genshin-ImpactInazuma-Genshin-Impact-4k.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.content-panel:nth-child(5)
+{
+    background-image: url(assets/9a54cf6198391bee3fb7408f42a781f2_5201112729941600074.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+/* .active-content
 {
     position: absolute;
     bottom: 20px;
@@ -58,7 +139,13 @@ body
     opacity: 100%;
     transition: opacity .8s ease-out,
                 transform .6 east-in-out;
-}
+    flex-direction: column;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+} */
 
 .content h3
 {
